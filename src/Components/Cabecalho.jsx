@@ -1,6 +1,7 @@
 import React from "react";
 import imagem from '../assets/img/doguito.svg';
 import '../assets/css/componentes/cabecalho.css';
+import { Link } from "react-router-dom";
 
 const Cabecalho = () => {
     return(
@@ -10,17 +11,17 @@ const Cabecalho = () => {
                 </span>
             </div>
             <div className="cabecalho-container">
-                <a href="/" className="flex flex--centro"> 
+                <Link to="/" className="flex flex--centro"> 
                     <img className="cabecalho__logo" src={imagem} alt="Logo doguito" />
                     <h1 className="cabecalho__titulo"> PetShop</h1>
-                </a>
+                </Link>
             </div>
             <nav className="menu-cabecalho">
                 <ul className="menu-itens">
-                    <li> <a className="menu-item menu-item--entrar" href="#">Entrar</a> </li>
-                    <li> <a className="menu-item" href="#">Produtos</a> </li>
-                    <li> <a className="menu-item" href="/">Blog</a> </li>
-                    <li> <a className="menu-item" href="/sobre">Sobre</a> </li>
+                    <li> <Link className="menu-item menu-item--entrar" href="#">Entrar</Link> </li>
+                    <li> <Link className="menu-item" to="#">Produtos</Link> </li>
+                    <li> <Link className="menu-item" to="/">Blog</Link> </li>
+                    <li> <Link className="menu-item" to="/sobre">Sobre</Link> </li>
                 </ul>
             </nav>
             <div className="menu-cabecalho-background"></div>
